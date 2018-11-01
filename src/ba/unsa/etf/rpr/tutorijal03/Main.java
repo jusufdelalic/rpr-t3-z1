@@ -4,7 +4,9 @@ public class Main {
 
     public static void main(String[] args) {
 	    System.out.println("Cilj vježbe je napraviti aplikaciju \"ETF Telefonski imenik\". Aplikacija se treba sastojati od sljedećih klasa:\n" +
-				"Apstraktna klasa TelefonskiBroj sadrži javnu apstraktnu metodu String ispisi() koja vraća broj u tekstualnoj formi pogodnoj za ispis, te apstraktnu metodu int hashCode() objašnjenu na predavanjima. Iz ove klase izvedene su sljedeće klase:\n" +
+				"Apstraktna klasa TelefonskiBroj sadrži javnu apstraktnu metodu String ispisi() koja vraća broj u tekstualnoj formi pogodnoj za ispis, te apstraktnu metodu " +
+				"int hashCode() objašnjenu na predavanjima. " +
+				"Iz ove klase izvedene su sljedeće klase:\n" +
 				"FiksniBroj sadrži konstruktor FiksniBroj(Grad grad, String broj). Parametar broj je dio telefonskog broja bez pozivnog broja npr. \"123-456\", a grad je promjenljiva pobrojanog tipa koji označava pozivni broj koji treba koristiti npr.:\n" +
 				"\tenum Grad { SARAJEVO, TUZLA, ZENICA…}\n" +
 				"Spisak pozivnih brojeva se može naći ovdje. Umjesto imena kantona koristite ime glavnog grada kantona (kao u primjeru iznad), a umjesto Brčko distrikta stavite BRCKO. Metoda ispisi() treba vratiti broj oblika \"033/123-456\".\n" +
