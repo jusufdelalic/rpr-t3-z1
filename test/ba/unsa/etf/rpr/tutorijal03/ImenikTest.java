@@ -29,6 +29,8 @@ class ImenikTest {
         assertEquals( "1. Ivo Ivic - 061/321-645", imenik.naSlovo('I').trim());
     }
 
+
+
     @Test
     void izGrada() {
         Imenik imenik = new Imenik();
@@ -60,4 +62,5 @@ class ImenikTest {
         }
         assertEquals("033/123-156,033/123-456,033/123-656,", result);
     }
+
 }
