@@ -37,8 +37,6 @@ public class MedunarodniBroj extends TelefonskiBroj {
 
     public String ispisi() {
 
-
-
         return pozivniBrojDrzave + broj;
     }
 
