@@ -27,7 +27,7 @@ public class MedunarodniBroj extends TelefonskiBroj {
         this.broj = broj;
     }
 
-    public int hashCode() { return  0; }
+    public int hashCode() { return  ispisi().hashCode(); } //String already has hashCode implemented
 
     public MedunarodniBroj(String drzava, String broj) {
 

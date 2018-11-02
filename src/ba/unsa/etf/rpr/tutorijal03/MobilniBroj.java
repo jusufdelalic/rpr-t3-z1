@@ -22,7 +22,7 @@ public class MobilniBroj extends TelefonskiBroj {
         this.broj = broj;
     }
 
-    public int hashCode() { return  0; }
+    public int hashCode() { return ispisi().hashCode(); }
 
     public MobilniBroj (int mobilnaMreza, String broj) {
 
@@ -32,8 +32,6 @@ public class MobilniBroj extends TelefonskiBroj {
     }
 
     public String ispisi() {
-
-
 
          return "0" + mobilnaMreza + "/" + broj;
 
