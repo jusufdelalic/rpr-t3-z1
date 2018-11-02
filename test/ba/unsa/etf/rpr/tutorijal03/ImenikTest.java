@@ -63,6 +63,34 @@ class ImenikTest {
         assertEquals("033/123-156,033/123-456,033/123-656,", result);
     }
 
+    @Test
+    void testDajBroj() {
+
+        Imenik imenik = new Imenik();
+
+        imenik.dodaj("William Seaberg", new MobilniBroj(62, "123-456"));
+        imenik.dodaj("Simon Fraunštupfer", new FiksniBroj(TRAVNIK, "444-333"));
+        imenik.dodaj("John Cleese", new MedunarodniBroj("+5","234-621"));
+
+        assertEquals("030/444-333", imenik.dajBroj("Simon Fraunštupfer"));
+
+    }
+
+    @Test
+    void testDajIme() {
+
+        Imenik imenik = new Imenik();
+
+        TelefonskiBroj mileninBroj = new FiksniBroj(TUZLA, "645-765");
+
+        imenik.dodaj("Hans von Gugl", new FiksniBroj(MOSTAR, "111-222"));
+        imenik.dodaj("Milena Generacija", mileninBroj);
+        imenik.dodaj("Steve Fired", new MedunarodniBroj("4","333-999"));
+
+        assertEquals("Milena Generacija", imenik.dajIme(mileninBroj));
+
+    }
+
 
 
 }
