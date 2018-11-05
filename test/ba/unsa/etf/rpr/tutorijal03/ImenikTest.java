@@ -70,9 +70,9 @@ class ImenikTest {
 
         imenik.dodaj("William Seaberg", new MobilniBroj(62, "123-456"));
         imenik.dodaj("Simon Fraunštupfer", new FiksniBroj(TRAVNIK, "444-333"));
-        imenik.dodaj("John Cleese", new MedunarodniBroj("+5","234-621"));
+        imenik.dodaj("John Cleese", new MedunarodniBroj("+3","12 23-62-31"));
 
-        assertEquals("030/444-333", imenik.dajBroj("Simon Fraunštupfer"));
+        assertEquals("+3 12 23-62-31", imenik.dajBroj("John Cleese"));
 
     }
 

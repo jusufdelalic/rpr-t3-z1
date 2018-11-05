@@ -9,16 +9,20 @@ import static ba.unsa.etf.rpr.tutorijal03.FiksniBroj.pozivniBrojevi;
 
 public class Imenik {
 
-    private HashMap<String, TelefonskiBroj> imenik;
+    // probably shouldn't have done this...
+
+    private HashMap <String, TelefonskiBroj> imenik;
+
+    // the key and value should probably switch places because two persons with the same name could exist
 
     public Imenik() {
+
         imenik = new HashMap<String, TelefonskiBroj>();
     }
 
     public void dodaj(String ime, TelefonskiBroj broj) {
 
         imenik.put(ime, broj);
-
     }
 
 
@@ -36,7 +40,7 @@ public class Imenik {
             HashMap.Entry pair = (HashMap.Entry) it.next();
             if (((String) (pair.getKey())).charAt(0) == s) {
                 brojOsoba++;
-                osobeNaSlovo += (String) (brojOsoba + ". " + pair.getKey() + " - " + ((TelefonskiBroj) (pair.getValue())).ispisi() + "\n"); // u mapi se cuvaju reference na Object
+                osobeNaSlovo += (String) (brojOsoba + ". " + pair.getKey() + " - " + ((TelefonskiBroj) (pair.getValue())).ispisi() + "\n"); // casting...
 
             }
         }
@@ -68,7 +72,8 @@ public class Imenik {
         while (it.hasNext()) {
 
             HashMap.Entry pair = (HashMap.Entry) it.next();
-            if (pair.getValue() == broj) return (String) pair.getKey(); // u mapi se cuvaju reference na Object
+            if (pair.getValue() == broj) return (String) pair.getKey(); // cast because Map holds keys and values
+                                                                        // of type Object
 
 
         }

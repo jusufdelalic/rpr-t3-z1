@@ -6,9 +6,12 @@ import java.util.Map;
 
 public class FiksniBroj extends TelefonskiBroj {
 
-    public static enum Grad {BIHAC, GORAZDE, LIVNO, MOSTAR, ORASJE, SARAJEVO, SIROKI_BRIJEG, TRAVNIK, TUZLA, ZENICA, BRCKO,
-                                   MRKONJIC_GRAD, BANJA_LUKA, PRIJEDOR, DOBOJ, SAMAC, BIJELJINA, ZVORNIK, PALE, FOCA, TREBINJE};
+    public static enum Grad {
+        BANJA_LUKA, BIHAC, BIJELJINA, BRCKO, DOBOJ, FOCA, GORAZDE, LIVNO, MOSTAR, MRKONJIC_GRAD, ORASJE,
+        PALE, PRIJEDOR, SAMAC, SARAJEVO, SIROKI_BRIJEG, TRAVNIK, TREBINJE, TUZLA, ZENICA, ZVORNIK
+    };
 
+    // HashMap of area codes
     public static final Map<Grad,String> pozivniBrojevi =  new HashMap<Grad,String >(){
         {
             put(Grad.BIHAC, "037"); put(Grad.GORAZDE, "038"); put(Grad.LIVNO, "034");
