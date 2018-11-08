@@ -11,7 +11,7 @@ public class Imenik {
 
     // probably shouldn't have done this...
 
-    private HashMap <String, TelefonskiBroj> imenik;
+    private Map <String, TelefonskiBroj> imenik;
 
     // the key and value should probably switch places because two persons with the same name could exist
 
